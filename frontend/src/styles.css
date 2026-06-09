@@ -1,0 +1,267 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  color: #182524;
+  background-color: #eef7f1;
+  font-synthesis: none;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: Inter, "Segoe UI", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100%;
+}
+
+body {
+  background-image: radial-gradient(circle at top left, rgba(79, 143, 128, 0.12), transparent 32%), radial-gradient(circle at bottom right, rgba(223, 121, 98, 0.08), transparent 26%);
+  background-color: #eef7f1;
+  color: #182524;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button,
+a,
+input,
+textarea,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.panel {
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
+  backdrop-filter: blur(16px);
+}
+
+.soft-panel {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(247, 250, 248, 0.95));
+  border: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.surface {
+  background: linear-gradient(180deg, rgba(238, 247, 241, 0.95), rgba(255, 255, 255, 0.96));
+}
+
+.auth-art {
+  background: linear-gradient(145deg, rgba(24, 37, 36, 0.96), rgba(48, 78, 71, 0.94)), linear-gradient(45deg, rgba(244, 190, 91, 0.16), transparent);
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-art::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 32px 32px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.8), transparent);
+}
+
+.auth-art > * {
+  position: relative;
+}
+
+.field {
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid #dbe4df;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 0.85rem 0.95rem;
+  font-size: 0.95rem;
+  color: #182524;
+  outline: none;
+  transition: border-color 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+
+.field:focus {
+  border-color: #4f8f80;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(79, 143, 128, 0.14);
+}
+
+.label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #64748b;
+}
+
+.icon-button {
+  display: grid;
+  height: 2.5rem;
+  width: 2.5rem;
+  place-items: center;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(226, 232, 240, 0.92);
+  background: rgba(255, 255, 255, 0.92);
+  color: #64748b;
+  transition: transform 160ms ease, border-color 160ms ease, color 160ms ease, background 160ms ease;
+}
+
+.icon-button:hover {
+  transform: translateY(-1px);
+  border-color: rgba(79, 143, 128, 0.35);
+  color: #182524;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  background: rgba(241, 245, 249, 0.85);
+  padding: 0.35rem 0.8rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #475569;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button,
+a,
+input,
+textarea,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(226, 232, 240, 0.78);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 22px 70px rgba(35, 49, 48, 0.09);
+}
+
+.panel {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(226, 232, 240, 0.92);
+  box-shadow: 0 18px 50px rgba(35, 49, 48, 0.08);
+}
+
+.soft-panel {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(247, 250, 248, 0.9));
+  border: 1px solid rgba(226, 232, 240, 0.88);
+}
+
+.surface {
+  background:
+    linear-gradient(135deg, rgba(244, 249, 246, 0.96), rgba(255, 250, 244, 0.98) 46%, rgba(246, 247, 251, 0.96)),
+    linear-gradient(90deg, rgba(122, 168, 153, 0.09) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(226, 137, 115, 0.06) 1px, transparent 1px);
+  background-size: auto, 42px 42px, 42px 42px;
+}
+
+.auth-art {
+  background:
+    linear-gradient(145deg, rgba(24, 37, 36, 0.96), rgba(48, 78, 71, 0.94)),
+    linear-gradient(45deg, rgba(244, 190, 91, 0.16), transparent);
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-art::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 32px 32px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.8), transparent);
+}
+
+.auth-art > * {
+  position: relative;
+}
+
+.field {
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 1px solid #dbe4df;
+  background: rgba(255, 255, 255, 0.94);
+  padding: 0.68rem 0.8rem;
+  font-size: 0.875rem;
+  color: #182524;
+  outline: none;
+  transition: border-color 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+.field:focus {
+  border-color: #4f8f80;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(79, 143, 128, 0.14);
+}
+
+.label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #64748b;
+}
+
+.icon-button {
+  display: grid;
+  height: 2.25rem;
+  width: 2.25rem;
+  place-items: center;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(226, 232, 240, 0.92);
+  background: rgba(255, 255, 255, 0.92);
+  color: #64748b;
+  transition: transform 160ms ease, border-color 160ms ease, color 160ms ease, background 160ms ease;
+}
+
+.icon-button:hover {
+  transform: translateY(-1px);
+  border-color: rgba(79, 143, 128, 0.35);
+  color: #182524;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border-radius: 999px;
+  border: 1px solid rgba(226, 232, 240, 0.92);
+  background: rgba(255, 255, 255, 0.72);
+  padding: 0.32rem 0.62rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #475569;
+}
